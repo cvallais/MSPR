@@ -1,5 +1,5 @@
   <head>
-    <<?php include_once('layouts/head.php') ?>
+    <?php include_once('layouts/head.php') ?>
 
   </head>
   <body>
