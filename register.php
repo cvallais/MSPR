@@ -2,6 +2,7 @@
 $title = 'Inscription';
 $description = '' ;
 
+
 ?>
 
     <?php include_once('layouts/header.php') ?>
@@ -15,24 +16,24 @@ $description = '' ;
 
     <div class="form-group">
     <label for="pseudo">Pseudo</label>
-    <input type="text" class="form-control" id="pseudo"  placeholder="Votre pseudo">
+    <input type="text" class="form-control" id="pseudo" name ="pseudo" placeholder="Votre pseudo">
     <small id="pseudo" class="form-text text-muted">Vous apparaitrez sous ce pseudo</small>
   </div>
 
   <div class="form-group">
     <label for="firstname">Nom</label>
-    <input type="text" class="form-control" id="firstname"  placeholder="Votre nom">
+    <input type="text" class="form-control" id="firstname"  name ="firstname" placeholder="Votre nom">
   </div>
 
   <div class="form-group">
     <label for="lastname">Prénom</label>
-    <input type="text" class="form-control" id="lastname"  placeholder="Votre prénom">
+    <input type="text" class="form-control" id="lastname"  name="lastname" placeholder="Votre prénom">
   </div>
 
 
   <div class="form-group">
     <label for="email">Adresse E-mail</label>
-    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+    <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Enter email">
     <small id="emailHelp" class="form-text text-muted">Votre adresse e-mail ne sera pas visible par les autres utilisateurs</small>
   </div>
 
