@@ -1,13 +1,8 @@
 <?php
 $title = 'Inscription';
-$description = '' ; 
+$description = '' ;
 
 ?>
-
-
-
-
-
 
     <?php include_once('layouts/header.php') ?>
 
@@ -17,7 +12,7 @@ $description = '' ;
 
      <form action="php/register.php" method="POST" class="container">
 
-      
+
     <div class="form-group">
     <label for="pseudo">Pseudo</label>
     <input type="text" class="form-control" id="pseudo"  placeholder="Votre pseudo">
@@ -34,7 +29,7 @@ $description = '' ;
     <input type="text" class="form-control" id="lastname"  placeholder="Votre prénom">
   </div>
 
-        	
+
   <div class="form-group">
     <label for="email">Adresse E-mail</label>
     <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
@@ -52,7 +47,7 @@ $description = '' ;
     <label for="password_bis">Confirmez votre mot de passe</label>
     <input type="password" class="form-control" id="password_bis" placeholder="Valider votre mot de passe">
   </div>
-  
+
   <button type="submit" class="btn btn-primary">Envoyer !</button>
 </form>
 
