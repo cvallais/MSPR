@@ -1,4 +1,3 @@
-    <footer> Mon  Footer</footer>
-    <?php include_once('layouts/head.php') ?>
+    <footer> Footer</footer>
       </body>
     </html>
