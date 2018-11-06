@@ -7,16 +7,19 @@ $description = '' ;
 <?php include_once('layouts/header.php') ?>
 
 
-<form action="php/login.php" method="POST" class="container">
+<form action="php/login.php" method="POST" class="container mt-5">
+
   <div class="form-group">
-    <label for="pseudo">Pseudo</label>
-    <input type="text" class="form-control" id="pseudo" placeholder="Votre pseudo">
+    <label for="email">E-mail</label>
+    <input type="email" class="form-control" id="email" name="email" placeholder="Votre e-mail">
   </div>
+
+
   <div class="form-group">
     <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="password" placeholder="Password">
+    <input type="password" class="form-control" id="password" name="password" placeholder="Password">
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-primary">Connection</button>
 
 
 

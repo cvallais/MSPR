@@ -35,6 +35,16 @@ $description = '' ;
       <small id="emailHelp" class="form-text text-muted">Votre adresse e-mail ne sera pas visible par les autres utilisateurs</small>
     </div>
 
+    <div class="form-group">
+    <label for="email">Ville</label>
+      <input type="text" class="form-control" id="city" name="city" placeholder="votre ville">
+    </div>
+
+    <div class="form-group">
+    <label for="email">Date de Naissance</label>
+      <input type="email" class="form-control" id="birthdate" name="birthdate" placeholder="votre date de naissance">
+    </div>
+
 
 
     <div class="form-group">

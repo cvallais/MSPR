@@ -4,13 +4,15 @@ require_once("db.php");
 
 
   $sql ="INSERT INTO users
-        VALUES (NULL, :firstname, :lastname, :pseudo, :email, :password, NOW(),NULL) ";
+        VALUES (NULL, :firstname, :lastname, :pseudo, :email, :city, :birthdate :password, NOW(),NULL) ";
 
         $stmt = $conn->prepare($sql);
         $stmt->bindValue(":firstname",$_POST['firstname']);
         $stmt->bindValue(":lastname",$_POST['lastname']);
         $stmt->bindValue(":pseudo",$_POST['pseudo']);
-        $stmt->bindValue(":email",$_POST['email']); 
+        $stmt->bindValue(":email",$_POST['email']);
+        $stmt->bindValue(":city",$_POST['city']);
+        $stmt->bindValue(":birthdate",$_POST['birthdate']); 
 
         //on hash le mot de passe
         //algo par défaut : bcrypt
