@@ -1,21 +1,19 @@
 <?php
-$title = 'Inscription';
+$title = 'Ajouter Evenement';
 $description = '' ;
 ?>
 
+
 <?php include_once('layouts/header.php') ?>
 
-<main id="content">
+<h1>Ajouter un évènement</h1>
 
-<!-- le formulaire redirige vers la page "register" qui va executer la requete SQL-->
-<form action="php/register.php" method="POST" class="container">
+<form action="../events.php" method="POST" class="container">
 
 
-     <form action="php/register.php" method="POST" class="container mt-5">
     <div class="form-group">
-    <label for="pseudo">Pseudo</label>
-      <input type="text" class="form-control" id="pseudo" name ="pseudo" placeholder="Votre pseudo">
-      <small id="pseudo" class="form-text text-muted">Vous apparaitrez sous ce pseudo</small>
+    <label for="name">Nom de l'évènement</label>
+      <input type="text" class="form-control" id="name" name ="name" placeholder="Nom de l'évènement">
       </div>
 
     <div class="form-group">
@@ -50,7 +48,7 @@ $description = '' ;
     <button type="submit" class="btn btn-primary">Envoyer !</button>
 </form>
 
-</main>
 
+</main>
 
 <?php include_once('layouts/footer.php') ?>

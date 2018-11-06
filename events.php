@@ -8,21 +8,27 @@ $description = '' ;
 
 
 
-//Mon contenu Principal
-</div>
-</div>
-<div class="col-lg-4">
-  <aside class="sidebar">
-    //Mon sidebar
-  </aside>
-</div>
+<div id='calendar'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.js"></script>
+<script>
+
+$(function() {
+
+  // page is now ready, initialize the calendar...
+
+  $('#calendar').fullCalendar({
+    // put your options and callbacks here
+  })
+
+});
+</script>
+
 
 </div>
 
 
-
-
-
+<a class="btn btn-primary"  href="add_event.php">Ajouter un évènement</a>
 </div>
 </main>
 
