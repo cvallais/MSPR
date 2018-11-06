@@ -3,7 +3,7 @@
 
 			<p>Les évenements à Nantes| <?php echo date("Y") ?></p>
 			<p>
-				<?php 
+				<?php
 					//pas connecté
 					if (empty($_SESSION['pseudo'])) {
 						echo "Vous n'etes pas connectés";

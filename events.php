@@ -16,37 +16,60 @@ $description = '' ;
 
   <div id='calendar'>
 
-<script>
-  $(function() {
-    $('#calendar').fullCalendar({
-      themeSystem: 'bootstrap4',
-      selectable: true,
-      locale: 'fr',
-      timeFormat: '(H:mm)',
-      defaultDate: moment().today,
-      defaultViex: 'month',
-      header: {
-        left: 'title',
-        center: '',
-        right: 'today prev,next month,basicWeek',
-      },
-      buttonText: {
-        today: 'Aujourd\'hui',
-        month: 'Mois',
-        week: 'Semaine',
-        day: 'Jour',
-        list: 'Liste'
-      },
+    <script>
+    $(function() {
+      $('#calendar').fullCalendar({
+        themeSystem: 'bootstrap4',
+        selectable: true,
+        locale: 'fr',
+        timeFormat: '(H:mm)',
+        defaultDate: moment().today,
+        defaultViex: 'month',
+        header: {
+          left: 'title',
+          center: '',
+          right: 'today prev,next month,basicWeek',
+        },
+        buttonText: {
+          today: 'Aujourd\'hui',
+          month: 'Mois',
+          week: 'Semaine',
+          day: 'Jour',
+          list: 'Liste'
+        },
+        eventSources: [
+          {
+
+            events: [
+              {
+                title  : 'Pourquoi pas ',
+                start  : '2018-11-09'
+              },
+              {
+                title  : 'Tournoi Dota 2',
+                start  : '2018-11-11',
+                end    : '2018-11-15'
+              },
+              {
+                title  : 'Foire de l\'oignon',
+                start  : '2018-11-12T12:30:00',
+              }
+            ],
+            color: 'red',
+            textColor: 'lightblue'
+          }
+
+        ]
+      });
     });
-  });
-</script>
+  </script>
 
 
-    </div>
+</div>
 
 
-    <a class="btn btn-primary"  href="add_event.php">Ajouter un évènement</a>
-  </div>
+<a class="btn btn-primary"  href="add_event.php">Ajouter un évènement</a>
+</div>
 </div>
 </main>
 
