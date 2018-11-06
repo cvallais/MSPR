@@ -9,12 +9,13 @@ $description = '' ;
 
 <form action="php/login.php" method="POST" class="container mt-5">
 
+<!--email-->
   <div class="form-group">
     <label for="email">E-mail</label>
     <input type="email" class="form-control" id="email" name="email" placeholder="Votre e-mail">
   </div>
 
-
+<!--mot de passe-->
   <div class="form-group">
     <label for="exampleInputPassword1">Password</label>
     <input type="password" class="form-control" id="password" name="password" placeholder="Password">

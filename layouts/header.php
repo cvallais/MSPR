@@ -1,5 +1,7 @@
 <head>
-  <?php include_once('layouts/head.php') ?>
+  <?php include_once('layouts/head.php');
+  session_start();
+   ?>
 
 </head>
 <body>
@@ -10,8 +12,11 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
+
         <ul class="navbar-nav">
-          <li class="nav-item active">
+
+
+          <li class="nav-item ">
             <a class="nav-link" href="index.php">Accueil <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
@@ -23,12 +28,24 @@
           <li class="nav-item">
             <a class="nav-link" href="events.php">Les évènements</a>
           </li>
+
+
+<?php if (isset($_SESSION['user']['id'])) { 
+  ?> 
+
           <li class="nav-item">
             <a class="nav-link" href="logout.php">Déconnection</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="profile.php">Profil</a>
           </li>
+ 
+<?php } ?>
+
+
+          
+ 
+        
 
         </ul>
       </div>

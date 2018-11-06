@@ -8,7 +8,7 @@ if(isset($_POST)){
 	$password 	= htmlspecialchars($_POST['password']);
 
 	//on selectionne l'utilisateur en fonction de l'email
-	$sql = "SELECT email, password FROM users WHERE email=:email";
+	$sql = "SELECT * FROM users WHERE email=:email";
 	$stmt = $conn->prepare($sql);
 	$stmt->bindValue(":email", $email);
 	$stmt->execute();
