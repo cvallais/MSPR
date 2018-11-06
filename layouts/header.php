@@ -19,12 +19,21 @@
           <li class="nav-item ">
             <a class="nav-link" href="index.php">Accueil <span class="sr-only">(current)</span></a>
           </li>
-          <li class="nav-item">
+
+
+
+<?php if (empty($_SESSION['user']['id'])) { 
+  ?> 
+
+           <li class="nav-item">
             <a class="nav-link" href="register.php">S'inscrire</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="login.php">Se connecter</a>
           </li>
+ 
+<?php } ?>
+         
           <li class="nav-item">
             <a class="nav-link" href="events.php">Les évènements</a>
           </li>

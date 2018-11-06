@@ -23,6 +23,9 @@ $stmt->bindValue(":date_created",  $date);
 
 $stmt->execute();
 
+//$user_id = $conn->lastInstertId();
 //On redirige
 header("Location: ../events.php")
 ?>
+
+
