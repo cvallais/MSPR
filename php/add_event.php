@@ -3,7 +3,7 @@
 require_once("db.php");
 
 
-  $sql ="INSERT INTO users
+  $sql ="INSERT INTO events
         VALUES (NULL, :name_event, :place, :date_event, :price, NOW()) ";
 
         $stmt = $conn->prepare($sql);
@@ -12,13 +12,6 @@ require_once("db.php");
         $stmt->bindValue(":date_event",$_POST['date_event']);
         $stmt->bindValue(":price",$_POST['price']);
 
-        //on hash le mot de passe
-        //algo par défaut : bcrypt
-        $_POST['password'] = password_hash($_POST['password'], PASSWORD_DEFAULT, [
-          'cost'=> 10
-        ]);
-
-        $stmt->bindValue(":password",$_POST['password']);
 
         $stmt->execute();
 

@@ -10,7 +10,7 @@ $description = '' ;
 
 <h1>Ajouter un évènement</h1>
 
-<form action="../add_event.php" method="POST" class="container">
+<form action="php/add_event.php" method="POST" class="container mt-5">
 
 
     <div class="form-group">

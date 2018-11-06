@@ -1,28 +1,28 @@
 <?php
-
 require_once("db.php");
 
+//On hash le mot de passe
+$password = htmlspecialchars($_POST['password']);
+$password = password_hash($password, PASSWORD_DEFAULT, ['cost'=> 10]);
+$date = date('Y-m-d H:i:s');
 
-  $sql ="INSERT INTO users
-        VALUES (NULL, :firstname, :lastname, :pseudo, :email, :city, :birthdate :password, NOW(),NULL) ";
+//On prépare le sql
+$sql ="INSERT INTO users (firstname, lastname, pseudo, email, city, birth_date, password, date_created)
+VALUES (:firstname, :lastname, :pseudo, :email, :city, :birth_date, :password, :date_created)";
 
-        $stmt = $conn->prepare($sql);
-        $stmt->bindValue(":firstname",$_POST['firstname']);
-        $stmt->bindValue(":lastname",$_POST['lastname']);
-        $stmt->bindValue(":pseudo",$_POST['pseudo']);
-        $stmt->bindValue(":email",$_POST['email']);
-        $stmt->bindValue(":city",$_POST['city']);
-        $stmt->bindValue(":birthdate",$_POST['birthdate']); 
+//On prépare les données
+$stmt = $conn->prepare($sql);
+$stmt->bindValue(":firstname",  $_POST['firstname']);
+$stmt->bindValue(":lastname",   $_POST['lastname']);
+$stmt->bindValue(":pseudo",     $_POST['pseudo']);
+$stmt->bindValue(":email",      $_POST['email']);
+$stmt->bindValue(":city",       $_POST['city']);
+$stmt->bindValue(":birth_date", $_POST['birthdate']); 
+$stmt->bindValue(":password",   $password);
+$stmt->bindValue(":date_created",  $date);
 
-        //on hash le mot de passe
-        //algo par défaut : bcrypt
-        $_POST['password'] = password_hash($_POST['password'], PASSWORD_DEFAULT, [
-          'cost'=> 10
-        ]);
+$stmt->execute();
 
-        $stmt->bindValue(":password",$_POST['password']);
-
-        $stmt->execute();
-
+//On redirige
 header("Location: ../events.php")
- ?>
+?>

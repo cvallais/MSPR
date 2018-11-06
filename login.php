@@ -20,8 +20,7 @@ $description = '' ;
     <input type="password" class="form-control" id="password" name="password" placeholder="Password">
   </div>
   <button type="submit" class="btn btn-primary">Connection</button>
+</form>
 
 
-
-  <?php include_once('layouts/footer.php') ?>
-</div>
+<?php include_once('layouts/footer.php') ?>
