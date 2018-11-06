@@ -11,7 +11,7 @@ $description = '' ;
 
 
 
-     <form action="php/register.php" method="POST" class="container">
+     <form action="php/register.php" method="POST" class="container mt-5">
 
 
     <div class="form-group">
