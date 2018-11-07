@@ -47,6 +47,9 @@
           <li class="nav-item">
             <a class="nav-link" href="profile.php">Profil</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="users.php">Utilisateurs</a>
+          </li>
  
 <?php } ?>
 
