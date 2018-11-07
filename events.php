@@ -10,14 +10,12 @@ $description = '' ;
 <div class="container col-lg-6 mt-5">
 
 <!-- le bouton qui permet d'ajouter un évènement n'est visible que si on est connecté-->
-<?php if (isset($_SESSION['user']['id'])) { 
-  ?> 
-    <a class="btn btn-outline-secondary"  href="add_event.php">Ajouter un évènement</a>    
+<?php if (isset($_SESSION['user']['id'])) {
+  ?>
+    <a class="btn btn-outline-secondary"  href="add_event.php">Ajouter un évènement</a>
 <?php } ?>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
-
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.js"></script>
 
   <div id='calendar'>
@@ -35,6 +33,7 @@ $description = '' ;
           left: 'title',
           center: '',
           right: 'today prev,next month,basicWeek',
+
         },
         buttonText: {
           today: 'Aujourd\'hui',
@@ -45,35 +44,21 @@ $description = '' ;
         },
         eventSources: [
           {
-
             events: [
+              <?php require_once('php/get_events.php'); ?>
+              <?php foreach($events as $event){ ?>
               {
-                title  : 'Pourquoi pas ',
-                start  : '2018-11-09'
+                title  : '<?php echo $event['name_event']; ?>',
+                start  : '<?php echo $event['date']; ?>'
               },
-              {
-                title  : 'Tournoi Dota 2',
-                start  : '2018-11-11',
-                end    : '2018-11-15'
-              },
-              {
-                title  : 'Foire de l\'oignon',
-                start  : '2018-11-12T12:30:00',
-              }
+              <?php } ?>
             ],
-            color: 'red',
-            textColor: 'black'
           }
-
         ]
       });
     });
-  </script>
-
-
+      </script>
 </div>
-
-
 </div>
 </div>
 </main>
