@@ -20,8 +20,6 @@ if(isset($_POST)){
 	//si on a trouvé un résultat...
 	if(isset($user)) {
 
-
-
 		//on vérifie son mot de passe
 		$passwordIsOK = password_verify($password, $user->password);
 
@@ -30,13 +28,12 @@ if(isset($_POST)){
 			
 			//on connecte le member
 			session_start();
-			$_SESSION['connected'] = true;
+			$_SESSION['connected'] = $user->id;
 			$_SESSION['user_id'] = $user->id;
 			header("Location:../index.php");
 			//sinon...
 		} else {?>
 			<div class="alert alert-danger">L'email ne correspond pas au mot de passe !</div>
-			<button type="button" class="btn btn-warning" href="login.php">Try again !</button>
 			<?php
 		}
 	}

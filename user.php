@@ -3,11 +3,7 @@ $title = 'Utilisateur';
 $description = '' ;
 ?>
 <?php require_once('./php/db.php'); ?>
-
-
 <?php include_once('layouts/header.php'); ?>
-
-
  <?php include_once('php/get_user.php') ?>
 
 

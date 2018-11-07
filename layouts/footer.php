@@ -10,7 +10,8 @@
 					}
 					//si connecté !
 					else {
-						echo "Vous êtes connectés en tant que ".$_SESSION['user_id'];
+						echo "Vous êtes connectés  "//.$_SESSION['user_id']
+						;
 					}
 				?>
 			</p>
