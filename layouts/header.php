@@ -12,7 +12,7 @@
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-
+      
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item ">
@@ -20,7 +20,7 @@
           </li>
 
 
-
+<!-- si la personne n'est pas connectée, elle n'aura PAS accès à ces pages-->
 <?php if (empty($_SESSION['user']['id'])) { 
   ?> 
 
@@ -33,10 +33,7 @@
  
 <?php } ?>
          
-          <li class="nav-item">
-            <a class="nav-link" href="events.php">Les évènements</a>
-          </li>
-
+<!--si la personne est connecté alors elle aura accès à ces pages dans le menu-->
 
 <?php if (isset($_SESSION['user']['id'])) { 
   ?> 
@@ -52,12 +49,6 @@
           </li>
  
 <?php } ?>
-
-
-          
- 
-        
-
         </ul>
       </div>
     </nav>
