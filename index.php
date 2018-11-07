@@ -17,7 +17,8 @@ $description = '' ;
           <div class="col-4">
             <div class="list-group" id="list-tab" role="tablist">
               <?php foreach($events as $event) {?>
-                <a class="list-group-item list-group-item-action  " id="list-home-list" data-toggle="list" href="#list-home<?php echo $event['id']; ?>" role="tab" aria-controls="home"><?php echo $event['name_event']; ?></a>
+                <a class="list-group-item list-group-item-action  " id="list-home-list" data-toggle="list" href="#list-home<?php echo $event['id']; ?>" role="tab" aria-controls="home"><?php echo $event['name_event'];?></a>
+
               <?php } ?>
             </div>
           </div>

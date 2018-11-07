@@ -24,8 +24,13 @@ $description = '' ;
     </div>
 
     <div class="form-group">
-    <label for="date_event">date_event de l'évènement</label>
+    <label for="date_event">Date de l'évènement</label>
       <input type="date" class="form-control" id="date_event"  name="date_event" placeholder="date évenement">
+    </div>
+
+    <div class="form-group">
+    <label for="date_event">Catégorie</label>
+      <input type="text" class="form-control" id="id_category"  name="id_category" placeholder="catégorie">
     </div>
 
 
@@ -35,6 +40,9 @@ $description = '' ;
       <small id="emailHelp" class="form-text text-muted">Entrez le prix minimum de l'évènement</small>
     </div>
 
+    <?php 
+    echo $_SESSION['user']['id']; ?>
+    <name="id_user"=<?php$_SESSION['user']['id']; ?>>
 
     <button type="submit" class="btn btn-primary">Créer !</button>
 </form>
