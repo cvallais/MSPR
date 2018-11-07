@@ -4,3 +4,4 @@ $sql = "SELECT * FROM users";
 $stmt = $conn->prepare($sql);
 $stmt->execute();
 $users = $stmt->fetchall();
+unset($conn);

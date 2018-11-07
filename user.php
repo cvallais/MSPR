@@ -1,0 +1,19 @@
+<?php require_once('.php/db.php'); ?>
+
+
+<?php include_once('layouts/header.php'); ?>
+
+<div class="container mt-5">
+  <h1><?php echo $user->name ?></h1>
+
+<ul>
+  <li><?php echo $user->birth_date ?></li>
+  <li><?php echo $user->name ?>
+  </li>
+</ul>
+
+
+//get user
+ if(isset($user_id)){
+   $id = $user_id;
+ } elseif(isset)
