@@ -13,6 +13,9 @@ $description = '' ;
       <table class="table table-striped table-hover table-bordered">
         <?php include('php/get_5_events.php'); ?>
 
+
+    <!--le contenu-->
+
         <div class="row">
           <div class="col-sm-12 col-md-6 col-lg-3">
             <div class="list-group" id="list-tab" role="tablist">
@@ -36,6 +39,14 @@ $description = '' ;
                 </div>
               <?php } ?>
             </div>
+          </div>
+
+
+<!--le calendrier-->
+
+
+          <div class="col-lg-4">
+            calendrier
           </div>
         </div>
 
