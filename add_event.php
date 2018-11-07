@@ -24,8 +24,13 @@ $description = '' ;
     </div>
 
     <div class="form-group">
-    <label for="date_event">Date de l'évènement</label>
-      <input type="date" class="form-control" id="date_event"  name="date_event" placeholder="date évenement">
+    <label for="date_start">Date de début de l'évènement</label>
+      <input type="date" class="form-control" id="date_start"  name="date_start" placeholder="date début">
+    </div> 
+
+    <div class="form-group">
+    <label for="date_end">Date de fin l'évènement</label>
+      <input type="date" class="form-control" id="date_end"  name="date_end" placeholder="date fin">
     </div>
 
     <div class="form-group">
