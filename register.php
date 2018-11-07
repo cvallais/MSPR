@@ -38,7 +38,6 @@ $description = '' ;
     <div class="form-group">
     <label for="email">Adresse E-mail</label>
       <input type="email" class="form-control is-valid" id="email" name="email" aria-describedby="emailHelp" placeholder="Enter email">
-      <small id="emailHelp" class="form-text text-muted">Votre adresse e-mail ne sera pas visible par les autres utilisateurs</small>
     </div>
 
     <!-- Ville-->

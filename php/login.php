@@ -1,6 +1,7 @@
 <?php
 //on se connecte à la DB
 require_once("db.php");
+include("../layouts/head.php");
 
 //si le formulaire et soumis...
 if(isset($_POST)){
@@ -30,9 +31,12 @@ if(isset($_POST)){
 			//on connecte le member
 			session_start();
 			$_SESSION['user']= $user;
-			header("Location:../events.php");
-		} else {
-			echo "L'email ne correspond pas au mot de passe !";
+			header("Location:../index.php");
+			//sinon...
+		} else {?>
+			<div class="alert alert-danger">L'email ne correspond pas au mot de passe !</div>
+			<button type="button" class="btn btn-warning" href="login.php">Try again !</button>
+			<?php
 		}
 	}
-}
+} ?>

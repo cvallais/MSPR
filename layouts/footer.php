@@ -1,5 +1,5 @@
 
-	<footer class="container">
+	<footer class="container mt-5">
 
 			<p>Les évenements à Nantes| <?php echo date("Y") ?></p>
 			<p>
