@@ -5,8 +5,10 @@ $description = '' ;
 require_once("php/db.php");
 include_once('layouts/header.php');
 
+//on récupère l'id de la personne connectée
 $id = $_SESSION['user']['id'];
 
+//on envoie la requete
 $sql = "SELECT * FROM users WHERE id = :id";
 
 	$stmt = $conn->prepare($sql);
@@ -23,7 +25,9 @@ $sql = "SELECT * FROM users WHERE id = :id";
 <div class="container mt-5">
 <h1>Profil</h1>
 
-<div class="infos profil">
+<div class="row">
+<!-- bloc des informations du profil-->
+<div class=".col-lg-6">
 <div class="card" style="width: 18rem;">
   <div class="card-body">
     <h3 class="card-title"><?php echo $profile['pseudo']; ?></h3>
@@ -37,13 +41,10 @@ $sql = "SELECT * FROM users WHERE id = :id";
     <li class="list-group-item"><?php echo $profile['birth_date']; ?></li>
     <li class="list-group-item"><?php echo $profile['date_created']; ?></li>
   </ul>
-  <div class="card-body">
-    <a href="#" class="card-link">Card link</a>
-    <a href="#" class="card-link">Another link</a>
-  </div>
 </div>
 </div>
 
+<div class=".col-lg-3">
 <div class="card" style="width: 18rem;">
   <div class="card-body">
     <h5 class="card-title">Evènements auxquels <?php echo $profile['pseudo']; ?> participe</h5>
@@ -53,13 +54,10 @@ $sql = "SELECT * FROM users WHERE id = :id";
     <li class="list-group-item">Dapibus ac facilisis in</li>
     <li class="list-group-item">Vestibulum at eros</li>
   </ul>
-  <div class="card-body">
-    <a href="#" class="card-link">Card link</a>
-    <a href="#" class="card-link">Another link</a>
-  </div>
+</div>
 </div>
 
-
+<div class=".col-lg-3">
 <div class="card" style="width: 18rem;">
   <div class="card-body">
     <h5 class="card-title">Evènements que <?php echo $profile['pseudo']; ?> a créé</h5>
@@ -69,12 +67,11 @@ $sql = "SELECT * FROM users WHERE id = :id";
     <li class="list-group-item">Dapibus ac facilisis in</li>
     <li class="list-group-item">Vestibulum at eros</li>
   </ul>
-  <div class="card-body">
-    <a href="#" class="card-link">Card link</a>
-    <a href="#" class="card-link">Another link</a>
-  </div>
+</div>
 </div>
 
+
+</div>
 </div>
 </main>
 

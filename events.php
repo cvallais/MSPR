@@ -5,9 +5,15 @@ $description = '' ;
 
 
 <?php include_once('layouts/header.php') ?>
-<div class="container">
 
 
+<div class="container col-lg-6 mt-5">
+
+<!-- le bouton qui permet d'ajouter un évènement n'est visible que si on est connecté-->
+<?php if (isset($_SESSION['user']['id'])) { 
+  ?> 
+    <a class="btn btn-outline-secondary"  href="add_event.php">Ajouter un évènement</a>    
+<?php } ?>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
 
@@ -56,7 +62,7 @@ $description = '' ;
               }
             ],
             color: 'red',
-            textColor: 'lightblue'
+            textColor: 'black'
           }
 
         ]
@@ -68,7 +74,6 @@ $description = '' ;
 </div>
 
 
-<a class="btn btn-primary"  href="add_event.php">Ajouter un évènement</a>
 </div>
 </div>
 </main>

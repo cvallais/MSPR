@@ -7,7 +7,7 @@ $description = '' ;
 <?php include_once('layouts/header.php') ?>
 
 
-<form action="php/login.php" method="POST" class="container mt-5">
+<form action="php/login.php" method="POST" class="container mt-5 col-lg-6">
 
 <!--email-->
   <div class="form-group">
@@ -20,7 +20,7 @@ $description = '' ;
     <label for="exampleInputPassword1">Password</label>
     <input type="password" class="form-control" id="password" name="password" placeholder="Password">
   </div>
-  <button type="submit" class="btn btn-primary">Connection</button>
+  <button type="submit" class="btn btn-outline-secondary">Connection</button>
 </form>
 
 

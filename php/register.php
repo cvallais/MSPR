@@ -24,8 +24,18 @@ $stmt->bindValue(":date_created",  $date);
 $stmt->execute();
 
 //$user_id = $conn->lastInstertId();
+//session_start();
+//$_SESSION['id']=$user_id;
+session_start();
+$_SESSION['connected'] = false;
+$_SESSION [errors] = [
+	'name' => 'Le nom est trop long',
+	'email' => 'L\'email ,n\' est pas bon',
+'password' => 'Le mot de passe est faux', 
+];
+
 //On redirige
-header("Location: ../events.php")
+header("Location: ../events.php");
 ?>
 
 
