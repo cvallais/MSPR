@@ -12,9 +12,9 @@ include_once('layouts/header.php');
 <ul>
 	<?php foreach($users as $user){?>
 	<div class="card">
-		<a href="user.php?id=<?php echo $user["id"];?>" class="btn btn-outline-secondary"><?php echo $user["pseudo"]; ?></a>
+		<a href="user.php?id=<?php echo $user ->id;?>" class="btn btn-outline-secondary"><?php echo $user ->pseudo; ?></a>
 	</div>
-	
+
 <?php } ?>
 </ul>
 
