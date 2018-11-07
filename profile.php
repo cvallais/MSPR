@@ -6,7 +6,7 @@ require_once("php/db.php");
 include_once('layouts/header.php');
 
 //on récupère l'id de la personne connectée
-$id = $_SESSION['user']['id'];
+$id = $_SESSION['user_id'];
 
 //on envoie la requete
 $sql = "SELECT * FROM users WHERE id = :id";
@@ -38,11 +38,11 @@ $sql = "SELECT * FROM users WHERE id = :id";
     <p class="card-text"><?php echo $profile ->description; ?></p>
   </div>
   <ul class="list-group list-group-flush">
-    <li class="list-group-item"><?php echo $profile ->firstname; ?></li>
-    <li class="list-group-item"><?php echo $profile ->lastname; ?></li>
-    <li class="list-group-item"><?php echo $profile ->city; ?></li>
-    <li class="list-group-item"><?php echo $profile ->email; ?></li>
-    <li class="list-group-item"><?php echo $profile ->birth_date; ?></li>
+    <li class="list-group-item">Nom : <?php echo $profile ->firstname; ?></li>
+    <li class="list-group-item">Prénom : <?php echo $profile ->lastname; ?></li>
+    <li class="list-group-item">Ville : <?php echo $profile ->city; ?></li>
+    <li class="list-group-item">Email :<?php echo $profile ->email; ?></li>
+    <li class="list-group-item">Né.e le : <?php echo $profile ->birth_date; ?></li>
   </ul>
 </div>
 </div>
