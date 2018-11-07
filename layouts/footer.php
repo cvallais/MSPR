@@ -5,12 +5,12 @@
 			<p>
 				<?php
 					//pas connecté
-					if (empty($_SESSION['user'])) {
+					if(!$_SESSION['connected']){
 						echo "Vous n'etes pas connectés";
 					}
 					//si connecté !
 					else {
-						echo "Vous êtes connectés en tant que ".$_SESSION['user']['pseudo'];
+						echo "Vous êtes connectés en tant que ".$_SESSION['user_id'];
 					}
 				?>
 			</p>

@@ -19,10 +19,7 @@
             <a class="nav-link" href="index.php">Accueil <span class="sr-only">(current)</span></a>
           </li>
 
-
-<!-- si la personne n'est pas connectée, elle n'aura PAS accès à ces pages-->
-<?php if (empty($_SESSION['user']['id'])) { 
-  ?> 
+          <?php if(empty($_SESSION['connected'])) { ?> 
 
            <li class="nav-item">
             <a class="nav-link" href="register.php">S'inscrire</a>
@@ -31,12 +28,7 @@
             <a class="nav-link" href="login.php">Se connecter</a>
           </li>
  
-<?php } ?>
-         
-<!--si la personne est connecté alors elle aura accès à ces pages dans le menu-->
-
-<?php if (isset($_SESSION['user']['id'])) { 
-  ?> 
+          <?php } else { ?> 
 
           <li class="nav-item">
             <a class="nav-link" href="logout.php">Déconnection</a>
@@ -48,7 +40,8 @@
             <a class="nav-link" href="users.php">Utilisateurs</a>
           </li>
  
-<?php } ?>
+          <?php } ?>
+
         </ul>
       </div>
     </nav>
