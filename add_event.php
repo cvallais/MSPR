@@ -10,7 +10,7 @@ $description = '' ;
 
 <h1>Ajouter un évènement</h1>
 
-<form action="php/add_event.php" method="POST" class="container mt-5">
+<form action="php/add_event.php" method="POST" class="container col-lg-6 mt-5">
 
 
     <div class="form-group">
@@ -34,6 +34,17 @@ $description = '' ;
     </div>
 
     <div class="form-group">
+    <label for="small_description">Petite description (facultative)</label>
+      <textarea type="text" class="form-control" id="small_description"  name="small_description" placeholder="description"></textarea>
+      <small id="small_description" class="form-text text-muted">Vous êtes limité à 250 caractères</small>
+    </div> 
+
+    <div class="form-group">
+    <label for="description">Description complète(facultative)</label>
+      <textarea type="text" class="form-control" id="description"  name="description" placeholder="description"></textarea>
+    </div>
+
+    <div class="form-group">
     <label for="date_event">Catégorie</label>
       <input type="text" class="form-control" id="id_category"  name="id_category" placeholder="catégorie">
     </div>
@@ -45,9 +56,7 @@ $description = '' ;
       <small id="emailHelp" class="form-text text-muted">Entrez le prix minimum de l'évènement</small>
     </div>
 
-    <?php 
-    echo $_SESSION['user']['id']; ?>
-    <name="id_user"=<?php$_SESSION['user']['id']; ?>>
+    
 
     <button type="submit" class="btn btn-primary">Créer !</button>
 </form>
