@@ -16,5 +16,8 @@
 			</p>
 		</footer>
 	</div>
+
+<?php require_once('javascript.php'); ?>
+
 </body>
 </html>

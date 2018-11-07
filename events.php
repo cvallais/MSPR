@@ -48,7 +48,7 @@ $description = '' ;
               <?php require_once('php/get_events.php'); ?>
               <?php foreach($events as $event){ ?>
               {
-                title  : '<?php echo $event['name_event']; ?>',
+                title  : "<?php echo htmlspecialchars($event['name_event']); ?>",
                 start  : '<?php echo $event['date_start']; ?>',
                 end  : '<?php echo $event['date_end']; ?>'
               },

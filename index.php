@@ -59,12 +59,12 @@ $description = '' ;
           <!--le calendrier-->
           <div class="col-lg-5">
 
-          <!--connection à une cdn-->
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.js"></script>
-
+      
           <!--affichage du calendrier-->
             <div id='calendar'>
+
+              </div>
+
               <script>
               $(function() {
                 $('#calendar').fullCalendar({
@@ -93,7 +93,7 @@ $description = '' ;
                         <?php require_once('php/get_events.php'); ?>
                         <?php foreach($events as $event){ ?>
                           {
-                            title  : '<?php echo $event['name_event']; ?>',
+                            title  : "<?php echo htmlspecialchars($event['name_event']); ?>",
                             start  : '<?php echo $event['date_start']; ?>',
                             end    : '<?php echo $event['date_end']; ?>'
                           },
@@ -104,7 +104,7 @@ $description = '' ;
                   });
                 });
                 </script>
-              </div>
+
             </div>
           </div>
 
