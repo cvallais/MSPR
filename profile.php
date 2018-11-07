@@ -17,7 +17,7 @@ $sql = "SELECT * FROM users WHERE id = :id";
 	$stmt->execute();
 	//récupère une seule ligne, donc fetch() et non fetchall()
 	$profile = $stmt->fetch();
-	
+
 ?>
 
 <?php include_once('layouts/header.php') ?>
@@ -31,7 +31,7 @@ $sql = "SELECT * FROM users WHERE id = :id";
 <div class="card" style="width: 18rem;">
   <div class="card-body">
     <h3 class="card-title"><?php echo $profile['pseudo']; ?></h3>
-    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, quis, soluta. Atque quo eum explicabo reprehenderit, tenetur placeat eaque dolor aut ipsa, possimus sapiente rerum et fugit iure ducimus sit!</p>
+    <p class="card-text"><?php echo $profile['description']; ?></p>
   </div>
   <ul class="list-group list-group-flush">
     <li class="list-group-item"><?php echo $profile['firstname']; ?></li>
@@ -39,7 +39,6 @@ $sql = "SELECT * FROM users WHERE id = :id";
     <li class="list-group-item"><?php echo $profile['city']; ?></li>
     <li class="list-group-item"><?php echo $profile['email']; ?></li>
     <li class="list-group-item"><?php echo $profile['birth_date']; ?></li>
-    <li class="list-group-item"><?php echo $profile['date_created']; ?></li>
   </ul>
 </div>
 </div>

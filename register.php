@@ -52,13 +52,18 @@ $description = '' ;
     <label for="email">Date de Naissance</label>
       <input type="date" class="form-control is-valid" id="birthdate" name="birthdate" placeholder="votre date de naissance">
     </div>
+    <!-- Description-->
+    <div class="form-group">
+    <label for="text">Une description de vous ! (facultatif)</label>
+      <textarea type="text" class="form-control is-valid" id="description" name="description" placeholder="votre description"></textarea>
+    </div>
 
-    <!-- Pseudo-->
+    <!-- Mot de passe-->
     <div class="form-group">
     <label for="password">Mot de Passe</label>
       <input type="password" class="form-control is-valid" id="password" name="password" placeholder="Votre mot de passe">
     </div>
-    
+
     <!--confirmation du mot de passe-->
     <div class="form-group">
     <label for="password_bis">Confirmez votre mot de passe</label>
