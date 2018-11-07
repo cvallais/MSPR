@@ -63,6 +63,7 @@ $description = '' ;
             <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.js"></script>
 
+          <!--affichage du calendrier-->
             <div id='calendar'>
               <script>
               $(function() {
