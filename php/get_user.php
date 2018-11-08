@@ -13,4 +13,4 @@ $stmt	->bindValue(":id",   $id);
 $stmt	->execute();
 
 $user = $stmt->fetchall();
-$id = $_SESSION['user_id'];}
+$id = $_SESSION['user_id'];
