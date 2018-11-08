@@ -1,18 +1,18 @@
 <?php
-require_once('db.php');
 
-//on récupère les variables
-$name_event = $_POST['name_event'];
-$place = $_POST['place'];
-$price = $_POST['price'];
-$date = $_POST['date'];
+//get user
+if(isset($event_id)){
+  $id = $event_id;
 
+  /*elseif(isset($id));
+  $id = */
+  require_once('db.php');
+  $sql = "SELECT * FROM events WHERE id= :id";
+  $stmt 	= $conn->prepare($sql);
+  $stmt	->bindValue(":id",   $id);
+  $stmt	->execute();
 
+  $user = $stmt->fetch();
+  $id = $_SESSION['event_id'];
 
-//on prépare la requete
-$sql = "SELECT * FROM events";
-$stmt = $conn->prepare($sql);
-$stmt->execute();
-$event = $stmt->fetch();
-
-$id_user = $event['id_user'];
+}
