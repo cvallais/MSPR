@@ -1,6 +1,8 @@
 <?php
 
 //get user
+$event_id = $_GET['id'];
+
 if(isset($event_id)){
   $id = $event_id;
 
@@ -12,7 +14,6 @@ if(isset($event_id)){
   $stmt	->bindValue(":id",   $id);
   $stmt	->execute();
 
-  $user = $stmt->fetch();
-  $id = $_SESSION['event_id'];
+  $event = $stmt->fetch();
 
 }
