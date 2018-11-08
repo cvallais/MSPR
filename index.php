@@ -30,7 +30,7 @@ $description = '' ;
             </div>
 
             <!-- le bouton qui permet d'ajouter un évènement n'est visible que si on est connecté-->
-            <?php if (isset($_SESSION ['user']['id'])) { ?>
+            <?php if (isset($_SESSION ['user_id'])) { ?>
               <a class="btn btn-outline-secondary mt-5"  href="add_event.php">Ajouter un évènement</a>
             <?php } ?>
           </div>
