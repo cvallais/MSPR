@@ -18,7 +18,7 @@ $description = '' ;
 
         <div class="row">
 
-        <!--colonne liste des évènements-->
+          <!--colonne liste des évènements-->
           <div class="col-sm-12 col-md-6 col-lg-3">
             <div class="list-group" id="list-tab" role="tablist">
               <!--par défaut inactif-->
@@ -35,7 +35,7 @@ $description = '' ;
             <?php } ?>
           </div>
 
-            <!--colonne informations sur l'évènement actif-->
+          <!--colonne informations sur l'évènement actif-->
           <div class="col-sm-12 col-md-6 col-lg-4">
             <div class="tab-content" id="nav-tabContent">
               <?php $i = 0; ?>
@@ -60,50 +60,50 @@ $description = '' ;
           <div class="col-lg-5">
 
 
-          <!--affichage du calendrier-->
+            <!--affichage du calendrier-->
             <div id='calendar'>
 
-              </div>
+            </div>
 
-              <script>
-              $(function() {
-                $('#calendar').fullCalendar({
-                  themeSystem: 'bootstrap4',
-                  selectable: true,
-                  locale: 'fr',
-                  timeFormat: '(H:mm)',
-                  defaultDate: moment().today,
-                  defaultViex: 'month',
-                  header: {
-                    left: 'title',
-                    center: '',
-                    right: 'today prev,next month,basicWeek',
+            <script>
+            $(function() {
+              $('#calendar').fullCalendar({
+                themeSystem: 'bootstrap4',
+                selectable: true,
+                locale: 'fr',
+                timeFormat: '(H:mm)',
+                defaultDate: moment().today,
+                defaultViex: 'month',
+                header: {
+                  left: 'title',
+                  center: '',
+                  right: 'today prev,next month,basicWeek',
 
-                  },
-                  buttonText: {
-                    today: 'Aujourd\'hui',
-                    month: 'Mois',
-                    week: 'Semaine',
-                    day: 'Jour',
-                    list: 'Liste'
-                  },
-                  eventSources: [
-                    {
-                      events: [
-                        <?php require_once('php/get_events.php'); ?>
-                        <?php foreach($events as $event){ ?>
-                          {
-                            title  : "<?php echo htmlspecialchars($event ->name_event); ?>",
-                            start  : '<?php echo $event ->date_start; ?>',
-                            end    : '<?php echo $event ->date_end; ?>'
-                          },
-                          <?php } ?>
-                        ],
-                      }
-                    ]
-                  });
+                },
+                buttonText: {
+                  today: 'Aujourd\'hui',
+                  month: 'Mois',
+                  week: 'Semaine',
+                  day: 'Jour',
+                  list: 'Liste'
+                },
+                eventSources: [
+                  {
+                    events: [
+                      <?php require_once('php/get_events.php'); ?>
+                      <?php foreach($events as $event){ ?>
+                        {
+                          title  : "<?php echo htmlspecialchars($event ->name_event); ?>",
+                          start  : '<?php echo $event ->date_start; ?>',
+                          end    : '<?php echo $event ->date_end; ?>'
+                        },
+                        <?php } ?>
+                      ],
+                    }
+                  ]
                 });
-                </script>
+              });
+              </script>
 
             </div>
           </div>

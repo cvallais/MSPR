@@ -25,11 +25,11 @@ if(isset($_POST)){
 
 		//si le mdp est le bon...
 		if ($passwordIsOK) {
-			
+
 			//on connecte le member
 			session_start();
-			$_SESSION['connected'] = $user->id;
-			$_SESSION['user_id'] = $user->id;
+			$_SESSION['connected'] = true;
+			$_SESSION['user_id'] = $user ->id;
 			header("Location:../index.php");
 			//sinon...
 		} else {?>

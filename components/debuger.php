@@ -6,8 +6,7 @@
           <div class="card-header">
             $_SESSION
           </div>
-          <div class="card-body">
-            <?php var_dump($_SESSION); ?>
+          <div class="card-body"><code><pre><?php var_dump($_SESSION); ?></pre></code>
           </div>
         </div>
       </div>
@@ -16,8 +15,7 @@
           <div class="card-header">
             $_POST
           </div>
-          <div class="card-body">
-            <?php var_dump($_POST); ?>
+          <div class="card-body"><code><pre><?php var_dump($_POST); ?></pre></code>
           </div>
         </div>
       </div>
@@ -26,8 +24,7 @@
           <div class="card-header">
             $_GET
           </div>
-          <div class="card-body">
-            <?php var_dump($_POST) ?>
+          <div class="card-body"><code><pre><?php var_dump($_GET); ?></pre></code>
           </div>
         </div>
       </div>
