@@ -6,21 +6,12 @@
 
 </head>
 <body>
+
+  <?php include_once('.components/debuger.php')?>
+
   <header>
 
 
-<!-- section debug en haut de la navbar-->
-    <div class="collapse" id="debug">
-      <div class="card card-body">
-        <!-- les différentes variables à debuguer-->
-        <b>session</b>
-          <?php
-            var_dump($_SESSION);
-            var_dump($user);
-          ?>
-      </div>
-    </div>
-      
 <!--navbar-->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
 <a class="navbar-brand" href="#">Logo</a>
@@ -62,9 +53,11 @@
 
     <?php } ?>
 
-    <li class="nav-item" data-toggle="collapse" href="#debug" >
-      <a class="nav-link" href="#debug">Debug</a>
+    <li class="nav-item">
+      <a class="nav-link" href="#debuger" data-toggle="collapse" role="button">Debuger</a>
     </li>
+
+
 
   </ul>
 </div>
