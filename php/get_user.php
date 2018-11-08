@@ -2,11 +2,11 @@
 
 
 //si la persoone n'est pas connectée le reste du code n'est pas nécessaire
-if (!empty($_SESSION['connected'])) {
+if (!empty($_GET['id'])) {
   
 
-
-$user_id = $_SESSION['user_id'];
+//on récupère l'id de l'utilisateur dont on veut les infiormations
+$user_id = $_GET['id'];
 if(isset($user_id)){
   $id = $user_id;
 
@@ -19,6 +19,6 @@ if(isset($user_id)){
   $stmt	->execute();
 
   $user = $stmt->fetch();
-  $id = $_SESSION['user_id'];
+  //$id = $_SESSION['user_id'];
 
 }}

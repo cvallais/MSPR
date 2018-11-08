@@ -13,7 +13,7 @@
 					}
 					//si pas connecté ..
 					else {
-						echo "Vous êtes connectés  ".$user->pseudo;
+						echo "Vous êtes connectés "
 						;
 					}
 				?>
