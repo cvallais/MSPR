@@ -3,7 +3,7 @@
 //get user
  if(isset($user_id)){
    $id = $user_id;
- 
+
  /*elseif(isset($id));
     $id = */
 require_once('db.php');
@@ -13,4 +13,6 @@ $stmt	->bindValue(":id",   $id);
 $stmt	->execute();
 
 $user = $stmt->fetchall();
-$id = $_SESSION['user_id'];}
+$id = $_SESSION['user_id'];
+
+}
