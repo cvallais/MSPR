@@ -11,14 +11,12 @@ $description = '' ;
 <h1>Ajouter un évènement</h1>
 
 <!--------------------formulaire---------------------->
-
 <form action="php/add_event.php" method="POST" class="container col-lg-6 mt-5">
-
 
     <div class="form-group">
     <label for="name_event">Nom de l'évènement</label>
       <input type="text" class="form-control" id="name_event" name ="name_event" placeholder="Nom de l'évènement">
-      </div> 
+      </div>
 
     <div class="form-group">
     <label for="place">Lieu</label>
@@ -28,7 +26,7 @@ $description = '' ;
     <div class="form-group">
     <label for="date_start">Date de début de l'évènement</label>
       <input type="date" class="form-control" id="date_start"  name="date_start" placeholder="date début">
-    </div> 
+    </div>
 
     <div class="form-group">
     <label for="date_end">Date de fin l'évènement</label>
@@ -39,7 +37,7 @@ $description = '' ;
     <label for="small_description">Petite description (facultative)</label>
       <textarea type="text" class="form-control" id="small_description"  name="small_description" placeholder="description"></textarea>
       <small id="small_description" class="form-text text-muted">Vous êtes limité à 250 caractères</small>
-    </div> 
+    </div>
 
     <div class="form-group">
     <label for="description">Description complète(facultative)</label>
@@ -60,8 +58,6 @@ $description = '' ;
 
     <button type="submit" class="btn btn-primary">Créer !</button>
 </form>
-
-</div>
 </main>
 
 <?php include_once('layouts/footer.php') ?>

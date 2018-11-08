@@ -64,9 +64,10 @@ $description = '' ;
             <div id='calendar'>
 
             </div>
-
+            <!-- On utilise du javascript pour afficher le calendrier -->
             <script>
             $(function() {
+              // on utilise bootstrap pour styliser le tableau
               $('#calendar').fullCalendar({
                 themeSystem: 'bootstrap4',
                 selectable: true,
@@ -80,6 +81,7 @@ $description = '' ;
                   right: 'today prev,next month,basicWeek',
 
                 },
+                // Permet d'afficher le texte des bouttons en francais
                 buttonText: {
                   today: 'Aujourd\'hui',
                   month: 'Mois',
@@ -87,6 +89,11 @@ $description = '' ;
                   day: 'Jour',
                   list: 'Liste'
                 },
+                // défini quand commence un jour
+                Duration: {
+                   default: "00:00:00",
+                 },
+                 // On récupere les événements dans notre base de donnée
                 eventSources: [
                   {
                     events: [

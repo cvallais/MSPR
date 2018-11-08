@@ -6,7 +6,7 @@
 				<?php
 					//si connecté..
 					if($_SESSION['connected']){
-						echo "Vous êtes connectés  ".$_SESSION['user_id'];
+						echo "Vous êtes connectés en tant que ".$user->pseudo;
 					}
 					//si pas connecté ..
 					else {
