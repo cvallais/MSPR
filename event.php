@@ -48,13 +48,14 @@ $description = '' ;
   
   <ul class="list-group list-group-flush">
 
-    <?php if ($_SESSION['user_id'] == $event->id_user) { ?>
+    
+    <!-- on peut participer peu importe notre statut-->
       <form action="php/delete_event.php" method="POST">
         <button class="btn btn-outline-success mt-5 col-12" >Je participe !</button>
       </form>
-    <?php } ?>
 
-
+    
+    <!-- seulement si on est le créateur de l'évenement-->
     <?php if ($_SESSION['user_id'] == $event->id_user) { ?>
       <form action="php/delete_event.php" method="POST">
         <button class="btn btn-outline-warning mt-5 col-12" >Modifier l'évènement</button>

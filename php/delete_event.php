@@ -7,4 +7,4 @@ $stmt = $conn->prepare($sql);
 $stmt->bindValue(":id", $id);
 $stmt->execute();
 
-header('Location: ../');
+header('Location: ../index.php');

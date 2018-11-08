@@ -1,10 +1,10 @@
 <?php
 
-//get user
 
-if (empty($_SESSION['connected'])) {
+//si la persoone n'est pas connectée le reste du code n'est pas nécessaire
+if (!empty($_SESSION['connected'])) {
   
-}
+
 
 $user_id = $_SESSION['user_id'];
 if(isset($user_id)){
@@ -21,4 +21,4 @@ if(isset($user_id)){
   $user = $stmt->fetch();
   $id = $_SESSION['user_id'];
 
-}
+}}
