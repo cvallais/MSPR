@@ -25,7 +25,7 @@ $sql = "SELECT * FROM users WHERE id = :id";
 <div class="container mt-5">
 
 
-<h1>Profil</h1>
+<h1>Votre profil</h1>
 
   <div class="card mt-5">
 <div class="row">
@@ -38,11 +38,11 @@ $sql = "SELECT * FROM users WHERE id = :id";
     <p class="card-text"><?php echo $profile ->description; ?></p>
   </div>
   <ul class="list-group list-group-flush">
-    <li class="list-group-item">Nom : <?php echo $profile ->firstname; ?></li>
-    <li class="list-group-item">Prénom : <?php echo $profile ->lastname; ?></li>
-    <li class="list-group-item">Ville : <?php echo $profile ->city; ?></li>
-    <li class="list-group-item">Email :<?php echo $profile ->email; ?></li>
-    <li class="list-group-item">Né.e le : <?php echo $profile ->birth_date; ?></li>
+    <li class="list-group-item">Nom :       <?php echo $profile ->firstname; ?></li>
+    <li class="list-group-item">Prénom :    <?php echo $profile ->lastname; ?></li>
+    <li class="list-group-item">Ville :     <?php echo $profile ->city; ?></li>
+    <li class="list-group-item">Email :     <?php echo $profile ->email; ?></li>
+    <li class="list-group-item">Né.e le :   <?php echo $profile ->birth_date; ?></li>
   </ul>
 </div>
 </div>

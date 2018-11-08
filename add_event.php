@@ -10,6 +10,8 @@ $description = '' ;
 
 <h1>Ajouter un évènement</h1>
 
+<!--------------------formulaire---------------------->
+
 <form action="php/add_event.php" method="POST" class="container col-lg-6 mt-5">
 
 
@@ -55,8 +57,6 @@ $description = '' ;
       <input type="number" class="form-control" id="price" name="price" aria-describedby="emailHelp" placeholder="prix">
       <small id="emailHelp" class="form-text text-muted">Entrez le prix minimum de l'évènement</small>
     </div>
-
-    
 
     <button type="submit" class="btn btn-primary">Créer !</button>
 </form>

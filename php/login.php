@@ -29,7 +29,7 @@ if(isset($_POST)){
 			//on connecte le member
 			session_start();
 			$_SESSION['connected'] = true;
-			$_SESSION['user_id'] = $user ->id;
+			$_SESSION['user_id'] = $user->id;
 			header("Location:../index.php");
 			//sinon...
 		} else {?>

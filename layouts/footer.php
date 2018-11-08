@@ -4,13 +4,13 @@
 			<p>Les évenements à Nantes| <?php echo date("Y") ?></p>
 			<p>
 				<?php
-					//pas connecté
-					if(!$_SESSION['connected']){
-						echo "Vous n'etes pas connectés";
+					//si connecté..
+					if($_SESSION['connected']){
+						echo "Vous êtes connectés  ".$_SESSION['user_id'];
 					}
-					//si connecté !
+					//si pas connecté ..
 					else {
-						echo "Vous êtes connectés  "//.$_SESSION['user_id']
+						echo "Vous n'etes pas connectés";
 						;
 					}
 				?>
