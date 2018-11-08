@@ -3,7 +3,7 @@ $title = 'Utilisateur';
 $description = '' ;
 ?>
 
- 
+
 <?php include_once('layouts/header.php'); ?>
 <?php require_once('./php/db.php'); ?>
 <?php include_once('php/get_user.php') ?>
@@ -65,4 +65,3 @@ $description = '' ;
 </main>
 
 <?php include_once('layouts/footer.php') ?>
-
