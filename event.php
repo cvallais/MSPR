@@ -15,10 +15,10 @@ $description = '' ;
             <p class="card-text"><?php echo $event->description; ?></p>
           </div>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item">Nom :       <?php echo $event->name_event; ?></li>
+            <li class="list-group-item">Nom :              <?php echo $event->name_event; ?></li>
             <li class="list-group-item">Date de début :    <?php echo $event->date_start; ?></li>
-            <li class="list-group-item"> Date de fin:     <?php echo $event->date_end; ?></li>
-            <li class="list-group-item">Ville :     <?php echo $event->place; ?></li>
+            <li class="list-group-item"> Date de fin:      <?php echo $event->date_end; ?></li>
+            <li class="list-group-item">Ville :            <?php echo $event->place; ?></li>
           </ul>
         </div>
       </div>
@@ -54,6 +54,12 @@ $description = '' ;
           </ul>
         </div>
       </div>
+
+  <?php include_once('./components/list_participants.php')?>
+  <?php 
+    echo $participant->pseudo;
+  ?>
+
     </div>
   </div>
   <?php include_once('layouts/footer.php'); ?>
