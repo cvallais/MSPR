@@ -1,12 +1,12 @@
-<?php
 
-$id_event=$_GET['id'];
+  <?php 
+  if (isset($participants)) {
+  
+  include_once('./php/list_participants.php')?>
+  <?php 
+    echo ($participants ? $participants->pseudo : '');
+  ?>
 
-
-$sql = "SELECT * FROM user_event INNER JOIN users WHERE user_event.event_id=:id_event";
-$stmt = $conn->prepare($sql);
-$stmt	->bindValue(":id_event", $id_event);
-$stmt	->execute();
-$participant = $stmt->fetch();
+ <?php
+}
 ?>
-

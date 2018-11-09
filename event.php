@@ -55,10 +55,8 @@ $description = '' ;
         </div>
       </div>
 
-  <?php include_once('./components/list_participants.php')?>
-  <?php 
-    echo $participant->pseudo;
-  ?>
+
+<?php include_once('./components/list_participants.php')?>
 
     </div>
   </div>
