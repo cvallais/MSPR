@@ -14,7 +14,6 @@ $stmt->execute();
 //récupère une seule ligne, donc fetch() et non fetchall()
 $profile = $stmt->fetch();
 ?>
-<?php include_once('layouts/header.php') ?>
 <div class="container mt-5">
 	<h1>Votre profil</h1>
 	<div class="card mt-5">

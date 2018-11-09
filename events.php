@@ -11,8 +11,9 @@ $description = '' ;
 <?php } ?>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.js"></script>
-  <div id='calendar'>
+  <div id='calendar'></div>
     <script>
+    //$ veut dire jquery en java script
     $(function() {
       $('#calendar').fullCalendar({
         themeSystem: 'bootstrap4',
