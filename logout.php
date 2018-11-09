@@ -3,8 +3,6 @@
 session_start();
 //détruire la session (tout)
 session_destroy();
-
-//on redirige 
+//on redirige
  header('Location: login.php');
-
 ?>
