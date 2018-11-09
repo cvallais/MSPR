@@ -1,6 +1,6 @@
 <?php
-session_start();
 
+session_start();
 $event_id 		= htmlspecialchars($_POST['event_id']);
 $user_id	 	= htmlspecialchars($_SESSION['user_id']);
 
@@ -15,4 +15,5 @@ $stmt->bindValue(":event_id",    $event_id);
 $stmt->execute();
 
 
+header("Location: ../index.php");
 ?>
