@@ -27,16 +27,23 @@ $stmt->bindValue(":birth_date",  $birthdate);
 $stmt->bindValue(":password",    $password);
 $stmt->bindValue(":date_created",  $date);
 $stmt->execute();
+
+//la connection automatique après inscription ne fonctionne pas, lastInstertId() ne semble pas etre reconnu
 //$user_id = $conn->lastInstertId();
 //session_start();
 //$_SESSION['id']=$user_id;
 session_start();
-$_SESSION['connected'] = false;
+$_SESSION['id']=$user_id;
+
+if ($_SESSION['connected'] = false) {
+	
 $_SESSION [errors] = [
 	'name' => 'Le nom est trop long',
 	'email' => 'L\'email ,n\' est pas bon',
 	'password' => 'Le mot de passe est faux',
 ];
+}
+
 //On redirige
-header("Location: ../index.php");
+header("Location: ../login.php");
 ?>

@@ -6,6 +6,7 @@ $stmt	->bindValue(":id",  3);
 $stmt	->execute();
 $users = $stmt->fetchAll();
 ?>
+
 <pre>
 <?php var_dump($users); ?>
 <pre>
