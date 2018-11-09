@@ -36,7 +36,9 @@ $description = '' ;
         <div  style="width: 18rem;">
           <ul class="list-group list-group-flush">
             <!-- on peut participer peu importe notre statut-->
-            <form action="#" method="POST">
+            <form action="php/participate.php" method="POST">
+              <input type="hidden" name="event_id" value="<?php echo $event->id ?>">
+              <input type="hidden" name="user_id" value="<?php echo $_SESSION[user_id] ?>">
               <button class="btn btn-outline-success mt-5 col-12" >Je participe !</button>
             </form>
             <!-- seulement si on est le créateur de l'évenement-->
