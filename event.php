@@ -41,6 +41,8 @@ $description = '' ;
               <input type="hidden" name="user_id" value="<?php echo $_SESSION[user_id] ?>">
               <button class="btn btn-outline-success mt-5 col-12" >Je participe !</button>
             </form>
+
+          
             <!-- seulement si on est le créateur de l'évenement-->
             <?php if ($_SESSION['user_id'] == $event->id_user) { ?>
               <a href="update_event.php?id=<?php echo $event->id; ?>" class="btn btn-outline-warning mt-5 col-12" >Modifier l'évènement</a>
@@ -51,6 +53,9 @@ $description = '' ;
                 <button class="btn btn-outline-danger mt-5 col-12" >Supprimer l'évènement</button>
               </form>
             <?php } ?>
+
+
+
           </ul>
         </div>
       </div>
@@ -58,13 +63,18 @@ $description = '' ;
       <?php include_once('./php/list_participants.php')?>
       <div class="container mt-5 col-lg-6">
         <ul class="row">
-          <?php foreach($participants as $participant){?>
-            <div class="col-sm-12 col-md-6 col-lg-3">
-              <div class="card">
-                <a href="#" class="btn btn-outline-secondary"><?php echo $participants->pseudo; ?></a>
-              </div>
-            </div>
-          <?php } ?>
+          
+  <?php 
+  if (isset($participants)) {
+  
+  include_once('./php/list_participants.php')?>
+  <?php 
+    echo ($participants ? $participants->pseudo : '');
+  ?>
+
+ <?php
+}
+?>
         </ul>
       </div>
 
