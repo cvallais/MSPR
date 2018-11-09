@@ -14,4 +14,5 @@ include_once('php/get_users.php') ?>
       </div>
     <?php } ?>
   </ul>
+</div>
   <?php include_once('layouts/footer.php') ?>

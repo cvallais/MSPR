@@ -54,9 +54,20 @@ $description = '' ;
           </ul>
         </div>
       </div>
+      <?php include_once('./components/list_participants.php')?>
+      <?php include_once('./php/list_participants.php')?>
+      <div class="container mt-5 col-lg-6">
+        <ul class="row">
+          <?php foreach($participants as $participant){?>
+            <div class="col-sm-12 col-md-6 col-lg-3">
+              <div class="card">
+                <a href="#" class="btn btn-outline-secondary"><?php echo $participants->pseudo; ?></a>
+              </div>
+            </div>
+          <?php } ?>
+        </ul>
+      </div>
 
-
-<?php include_once('./components/list_participants.php')?>
 
     </div>
   </div>
